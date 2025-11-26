@@ -33,6 +33,7 @@ public class ProductService {
                 .map(p -> {
                     p.setName(product.getName());
                     p.setPrice(product.getPrice());
+                    p.setQuantity(product.getQuantity());
                     return productRepository.save(p);
                 })
                 .orElse(null);
